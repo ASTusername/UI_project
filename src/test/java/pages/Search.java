@@ -12,8 +12,11 @@ import static com.codeborne.selenide.Selenide.$$;
 public class Search {
     private final SelenideElement
             searchTitle = $(".title_general");
-    private final ElementsCollection
-            itemTitle = $$(".item-catalogue-card__title");
+    private final SelenideElement
+            inputSearch = $(".popup_content");
+
+    private final SelenideElement
+            itemTitle = $("h1.title");
     private final ElementsCollection
             countResult = $$(".item-catalogue-card__container");
 
@@ -32,7 +35,7 @@ public class Search {
 
     @Step("Проверка количества результатов поиска")
     public Search checkResults(String value) {
-        itemTitle.first().shouldHave(text(value));
+        itemTitle.shouldHave(text(value));
         return this;
     }
 }

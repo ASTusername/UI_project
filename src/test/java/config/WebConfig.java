@@ -6,7 +6,7 @@ import java.net.URL;
 @Config.Sources({"classpath:${env}.properties"})
 public interface WebConfig extends Config {
     @Key("baseUrl")
-    @DefaultValue("https://www.satra.ru/")
+    @DefaultValue("https://www.rusmuseum.ru//")
     String baseUrl();
 
     @Key("browser")
