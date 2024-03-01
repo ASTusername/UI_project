@@ -92,14 +92,15 @@ ____
 ## <img src="media/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a>Уведомление в Telegram
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="media/screenshots/Telega.png">  
+<img title="Allure Overview Dashboard" src="media/screenshots/TG.png">  
 </p>
 
 <a id="video"></a>
 ## <img src="media/logo/Selenoid.svg" width="25" height="25"  alt="Selenoid"/></a> Примеры видео выполнения тестов на Selenoid
 
+<video width="100%" height="100%" controls="" autoplay=""><source src="https://selenoid.autotests.cloud/video/d5cef0a8663200ae49bb13b5a3c0f7ac.mp4" type="video/mp4"></video>
 
 <p align="center"> 
-<img title="Selenoid Video" src="media/video/Video.gif" width="650" height="350"  alt="video">  
+<img title="Selenoid Video" src="media/video/Video.gif" width="650" height="350"  alt="video">
 
 [Наверх ⬆](#наверх)
