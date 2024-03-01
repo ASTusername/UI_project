@@ -100,7 +100,4 @@ ____
 
 <video width="100%" height="100%" controls="" autoplay=""><source src="https://selenoid.autotests.cloud/video/d5cef0a8663200ae49bb13b5a3c0f7ac.mp4" type="video/mp4"></video>
 
-<p align="center"> 
-<img title="Selenoid Video" src="media/video/Video.gif" width="650" height="350"  alt="video">
-
 [Наверх ⬆](#наверх)
