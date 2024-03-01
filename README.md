@@ -52,7 +52,7 @@ gradle clean test -DenvWeb=remote
 ```
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="media/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/AST_UI_project/)</a>
+## <img alt="Jenkins" height="25" src="media/logo/Jenkins.svg" width="25"/></a><a name="Сборка">Сборка в [Jenkins](https://jenkins.autotests.cloud/job/AST_UI_project/)</a>
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/AST_UI_project/"><img src="media/screenshots/JenkinsBuild.png" alt="Jenkins"/></a>  
 </p>
