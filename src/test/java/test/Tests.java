@@ -65,7 +65,7 @@ public class Tests extends TestBase {
 
     @CsvFileSource(resources = "/search.csv", delimiter = '|')
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Проверка поиска товаров")
+    @DisplayName("Проверка поиска")
     @ParameterizedTest(name = "При поиске товара из категории {0} в списке есть товар {1}")
     void testSearchParameterized(String searchQuery, String expectedName) {
         step("Открываем страницу и вводим поисковое слово", () ->
