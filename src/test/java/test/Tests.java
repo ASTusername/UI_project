@@ -19,49 +19,44 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Tag("ui")
 @DisplayName("Проверка главной страницы")
 public class Tests extends TestBase {
-    MainPage mainPage = new MainPage();
-    Shop shop = new Shop();
-    Cart cart = new Cart();
-    Search search = new Search();
-    Catalog catalog = new Catalog();
+    MainPages mainPages = new MainPages();
+    ShopPages shopPages = new ShopPages();
+    SearchPages searchPages = new SearchPages();
+    AboutPages aboutPages = new AboutPages();
 
     @Test
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка заголовка главной страницы")
     void testMainPageTitle() {
-        mainPage.openPage();
+        mainPages.openPage();
         step("Проверяем заголовок главной страницы", () ->
                 assertThat(title()).isEqualTo(titleMainPage));
     }
 
-/*    @Test
+    @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Проверка корзины")
-    void testCart() {
-        mainPage.openPage().addItem();
-        mainPage.openBasket();
-        cart.checkCart();
-    }*/
+    @DisplayName("Проверка количества элементов главного меню")
+    void testMainPageTopMenu() {
+        mainPages.openPage();
+        step("Проверяем количества элементов главного меню", () ->
+                assertThat(mainPages.topMenu()).isEqualTo(12));
+    }
 
     @Test
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка страницы Билеты")
     void testOpenPageShop() {
-        mainPage.openPage().openPageShop();
-        shop.checkAboutShopTitleCorrect();
+        mainPages.openPage().openPageShop();
+        shopPages.checkAboutShopTitleCorrect();
     }
 
-/*    @Test
+    @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Проверка поиска")
-    void testSearch() {
-        step("Открываем страницу и нажимаем кнопку поиск", () ->
-                mainPage.openPage().openSearch().search());
-        step("Проверка поискового слова на странице поиска и количество найденных товаров", () -> {
-                search.checkSearchTitle(searchQuery);
-        //        search.checkCountResults();
-        });
-    }*/
+    @DisplayName("Проверка информации о билетах")
+    void testPageShop() {
+        mainPages.openPage().openPageShop();
+        shopPages.checkInfoAboutTickets();
+    }
 
     @CsvFileSource(resources = "/search.csv", delimiter = '|')
     @Severity(SeverityLevel.NORMAL)
@@ -69,21 +64,17 @@ public class Tests extends TestBase {
     @ParameterizedTest(name = "При поиске товара из категории {0} в списке есть товар {1}")
     void testSearchParameterized(String searchQuery, String expectedName) {
         step("Открываем страницу и вводим поисковое слово", () ->
-                mainPage.openPage().search(searchQuery));
+                mainPages.openPage().search(searchQuery));
         step("Проверка поискового слова на странице поиска и количество найденных товаров", () -> {
-            search.checkResults(expectedName);
+            searchPages.checkResults(expectedName);
         });
     }
 
-    /*@Test
+    @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Проверка каталога")
-    void testOpenSubCatalog() {
-        step("Открываем подкаталог Мебель для ванной", () ->
-                mainPage.openPage()
-                        .openCatalogMenu().openSubCatalogMenu());
-        step("Проверка заголовка в подкаталоге", () -> {
-            catalog.checkTitleCatalog(titleSubCatalog);
-        });
-    }*/
+    @DisplayName("Проверка страницы из левого меню")
+    void testOpenPageFromLeftMenu() {
+        mainPages.openPage().openPageAbout();
+        aboutPages.leftMenuFindElement(leftMenuMainPage).checkTitleCPalaceorrect();
+    }
 }

@@ -11,12 +11,13 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static data.TestData.*;
 
-public class Cart {
+public class CartPages {
     private final SelenideElement
-            basketEmpty = $(".bx-sbb-empty-cart-text"),
-            basketNotEmpty = $(".header_bascet"),
+            tickets = $(".bt_arrow red"),
+            title = $(".title"),
+            infoAboutTickets = $(".slide-title"),
             basketBack = $(".back_prod");
-            //basketBack = $(By.linkText("Нажмите здесь"));
+    //basketBack = $(By.linkText("Нажмите здесь"));
     private final ElementsCollection
             btnBuy = $$(".item-catalogue-card__title");
 
@@ -27,13 +28,13 @@ public class Cart {
         return this;
     }*/
 
-    @Step("Проверка надписи в пустой корзине")
-    public Cart checkEmptyCart() {
-        basketEmpty.shouldHave(text(titleEmptyCartPage));
+    @Step("Проверка надписи")
+    public CartPages checkTitle() {
+        title.shouldHave(text(titleCartPage));
         return this;
     }
 
-    @Step("Проверка надписи в непустой корзине")
+/*    @Step("Проверка надписи в непустой корзине")
     public Cart checkCart() {
         basketNotEmpty.shouldHave(text(titleCartPage));
         return this;
@@ -43,5 +44,5 @@ public class Cart {
     public Cart backFromCart() {
         basketBack.click();
         return this;
-    }
+    }*/
 }
