@@ -10,7 +10,7 @@ import static data.TestData.*;
 public class ShopPages {
     private final SelenideElement
             shopTitle = $("h1.title"),
-            infoAboutTickets = $("[div='column span-9 text']");
+            infoAboutTickets = $("[class='column span-9 text']");
 
     @Step("Проверка наличия заголовка Билеты")
     public ShopPages checkAboutShopTitleCorrect() {

@@ -11,14 +11,8 @@ import static com.codeborne.selenide.Selenide.*;
 public class MainPages {
     private final ElementsCollection topMenu = $("[class='column span-10 menu']").$$("ul");
     private final ElementsCollection leftMenu = $("[class='rm_menuleft]").$$("ul li");
-   // private final SelenideElement shop = $$(".parent").findBy(text("Посетителям"));
     private final SelenideElement shop = $("[class='column span-1 buy']");
     private final SelenideElement about = $$(".parent").findBy(text("Русский музей"));
-    private final SelenideElement btnBasket = $("a.btn");
-    private final ElementsCollection
-            btnBuy = $$(".item-catalogue-card__title");
-    private final SelenideElement
-            btnSearch = $("[aria-label='Поиск']");
     private final SelenideElement
             inputSearch = $(".search-suggest");
 
@@ -46,12 +40,6 @@ public class MainPages {
 
     public MainPages openPageAbout() {
         about.click();
-        return this;
-    }
-
-    @Step("Перейти на страницу из левого меню")
-    public MainPages openPageAbout(String value) {
-        leftMenu.findBy(text(value)).click();
         return this;
     }
 }
