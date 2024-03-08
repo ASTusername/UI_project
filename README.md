@@ -1,5 +1,11 @@
 # UI-тестирование сайта [Русский музей](https://www.rusmuseum.ru/)
 
+<a name="наверх"></a>
+
+<p align="center">  
+<img title="Allure Overview Dashboard" src="media/screenshots/Museum.png">  
+</p> 
+
 ## :scroll: Содержание:
 * <a href="#tools">Используемый стек</a>
 * <a href="#cases">Примеры автоматизированных тест-кейсов</a>
@@ -30,6 +36,18 @@ ____
 <a href="https://web.telegram.org/a/"><img width="6%" title="Telegram" src="media/logo/Telegram.svg"></a>
 <a href="https://www.atlassian.com/ru/software/jira/"><img width="5%" title="Jira" src="media/logo/Jira.svg"></a>
 </p>
+
+- Java - язык программирования, на котором написан проект тестирования
+- Selenide - фреймворк, упрощающий работу с Selenium WebDriver
+- Selenoid - программа, в которой можно запускать тесты, не потребляя собственные ресурсы
+- Allure Report - инструмент для составления отчетов о тестировании, интегрирован с Allure TestOps
+- Allure TestOps - система управления тестированием, интегрирована с Allure TestOps и Jira
+- Gradle - система сборки проекта, более компактная, чем Maven
+- Junit5 - фреймворк для тестирования, написанный на Java
+- GitHub - сервис для размещения проектов
+- Jenkins - сервер непрерывной интеграции (CI), использовалась для автоматизации сборки тестирования, развертывания
+- Telegram - месседжер, на который отправляются результаты тестирования
+- Jira - система управления проектами, использовалась для создания задачи, интегрированной с Allure TestOps
 
 ____
 <a id="cases"></a>
